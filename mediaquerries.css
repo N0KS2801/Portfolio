@@ -17,7 +17,7 @@
     }
     #experience, .experience-details-container {
         margin-top: 2rem;
-        display: flex;
+        display: block;
     }
     #profile,
     .section-container {
