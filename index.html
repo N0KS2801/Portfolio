@@ -1,473 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaquerries.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jericho Peralta — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Jericho Peralta</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+
+  <!-- ── DESKTOP NAV ── -->
+  <nav id="desktop-nav">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-slash">/</span> JERICHO
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Arsenal</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HAMBURGER NAV ── -->
+  <nav id="hamburger-nav">
+    <a href="#hero" class="nav-logo"><span class="logo-slash">/</span> JERICHO</a>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Arsenal</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Work</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO SECTION ── -->
+  <section id="hero">
+    <div class="hero-bg-text" aria-hidden="true">DEV</div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <span class="hero-label">PORTFOLIO / 2026</span>
+        <h1 class="hero-title">
+          Hello, I'm<br>
+          <em>Jericho</em><br>
+          <span class="hero-surname">Peralta.</span>
+        </h1>
+        <p class="hero-tagline">"Code meets creativity."</p>
+        <p class="hero-desc">Web Developer &amp; UI Designer based in Australia. I build things that are fast, functional, and beautiful.</p>
+        <div class="hero-cta-row">
+          <button class="btn btn-light" onclick="location.href='#projects'">View My Work</button>
+          <button class="btn btn-ghost" onclick="window.open('./assets/Jericho Peralta Resume .pdf')">Download CV</button>
         </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Jericho Peralta</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>     
-            </div>
-        </div>
-
-    </nav>
-
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/Perala Circle.png" alt="Jericho Peralta profile picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text-p1">Hello, I'm</p>
-            <h1 class="section">Jericho Peralta</h1>
-            <p class="section__text__p2">Web Developer</p>
-            <div class="btn-container">
-                
-                <button class="btn btn-color-2"
-                 onclick="window.open('./assets/Jericho Peralta Resume .pdf')">
-                 Download CV
-                </button>
-
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                 Contact Info
-                </button>
-
-            </div>
-            <br>
-            <div id="social-container">
-                <img src="./assets/linkedin.png" 
-                alt="My LinkedIn profile"
-                class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/jericho-nookie-peralta-6889b229a/'"
-                />
-
-                <img src="./assets/github.png" 
-                alt="My GitHub profile"
-                class="icon" 
-                onclick="location.href='https://github.com/N0KS2801?tab=overview&from=2026-03-01&to=2026-03-14/%22/'"
-                />
-
-
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <p class="section__text__p1">Get to Know more</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/Peralta hero.png" 
-                alt="Profile picture"
-                class="about-pic"
-                />
-            </div>
-            
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img 
-                        src="./assets/experience.png" 
-                        alt="Experience icon" 
-                        class="icon"
-                        />
-                        <h3>Experienced</h3>
-                        <p>2+ years <br>Web Development</p>
-                    </div>
-                    <div class="details-container">
-                        <img 
-                        src="./assets/education.png" 
-                        alt="Education icon" 
-                        class="icon"
-                        />
-                        <h3>Education</h3>
-                        <p>Bachelor's Degree <br>Science in Information Technology</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <br>
-                    <p>
-                        🚀 I’m Jericho Peralta, an international student in Australia pursuing a Master of Information Technology, with a Bachelor’s degree in IT. I combine strong programming skills with hands-on graphic design experience, bringing both technical precision and creative problem-solving to every project.
-<br>
-<br>
-🌐 I am passionate about building innovative software and web solutions, eager to apply my expertise to projects that make an impact and thrive in collaborative, forward-thinking teams.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="Arrow icon" class="icon arrow" 
-        onclick="location.href='./#experience'"
-        />
-    </section>
-
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experience</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-
-                <div>
-                  <h3>Java</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-
-                <div>
-                  <h3>Laravel</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-            </div>
-            
-          </div>
-          
-          <div class="details-container">
-            <h2 class="experience-sub-title">Graphics & UI Design</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Figma</h3>
-                  <p>Experienced</p>
-                </div>
-                </article>
-
-                <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Photoshop</h3>
-                  <p>Experienced</p>
-                </div>
-                </article>
-
-                <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Illustrator</h3>
-                  <p>Experienced</p>
-                </div>
-                </article>
-
-                <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Canva</h3>
-                  <p>Experienced</p>
-                </div>
-                </article>
-
-                <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Adobe AE</h3>
-                  <p>Experienced</p>
-                </div>
-                </article>
-
-                <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Capcut</h3>
-                  <p>Experienced</p>
-                </div>
-                </article>
-            </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/jericho-nookie-peralta-6889b229a/" target="_blank" class="social-pill">LI</a>
+          <a href="https://github.com/N0KS2801" target="_blank" class="social-pill">GH</a>
         </div>
       </div>
-      
-      
-        <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>        
-        
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/antigomode 1080.jpg" 
-                     alt="Project 1"
-                     class="project-img"
-                     />
-                </div>
-                <h2 class="experience-sub-title project-title">Antigomode</h2>
-                <p>A sleek online store for Antigomode, showcasing its fashion collections with effortless usability.</p>
-                <br>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://antigomode.com'">
-                        Go to Website
-                    </button>
 
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://www.instagram.com/antigomode/'">
-                        Instagram
-                    </button>
+      <div class="hero-right">
+        <div class="hero-img-wrap">
+          <img src="./assets/Perala Circle.png" alt="Jericho Peralta" />
+          <div class="hero-card">
+            <span class="hcard-num">2+</span>
+            <span class="hcard-label">Years<br>Experience</span>
+          </div>
+          <div class="hero-card hero-card-2">
+            <span class="hcard-num">4</span>
+            <span class="hcard-label">Live<br>Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="hero-stats-bar">
+      <div class="hstat"><span class="hstat-n">HTML/CSS</span><span class="hstat-l">Experienced</span></div>
+      <div class="hstat-divider" aria-hidden="true">—</div>
+      <div class="hstat"><span class="hstat-n">JavaScript</span><span class="hstat-l">Proficient</span></div>
+      <div class="hstat-divider" aria-hidden="true">—</div>
+      <div class="hstat"><span class="hstat-n">Figma</span><span class="hstat-l">Experienced</span></div>
+      <div class="hstat-divider" aria-hidden="true">—</div>
+      <div class="hstat"><span class="hstat-n">Python</span><span class="hstat-l">Proficient</span></div>
+    </div>
 
-                </div>
-            </div>
+    <div class="scroll-hint" onclick="location.href='#about'">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
 
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/Gonav Hero 1080.jpg" 
-                     alt="Project 2"
-                     class="project-img"
-                     />
-                </div>
-                <h2 class="experience-sub-title project-title">GoNav</h2>
-                 <p>A mobile app that enables MMSU students to navigate campus and access news seamlessly.</p>
-                <br>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://www.figma.com/proto/CnKwHHNjID4gtzITUWujul/GOnav?node-id=2-12&t=vja7u8AePX1qYWZj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A20&show-proto-sidebar=1'">
-                        Prototype
-                    </button>
+  <!-- ── ABOUT SECTION ── -->
+  <section id="about">
+    <div class="section-label-row">
+      <span class="sec-num">01</span>
+      <span class="sec-slash">/</span>
+      <span class="sec-tag">About Me</span>
+    </div>
 
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://youtu.be/fTmRWudllyo?si=oTl7BzaARQZcZnDI'">
-                        Video Demo
-                    </button>
-                </div>
-            </div>
+    <h2 class="section-title reveal">My <em>Story</em></h2>
+    <p class="section-sub reveal">Everything about myself — no filter.</p>
 
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/Currency 1080.png" 
-                     alt="Project 3"
-                     class="project-img"
-                     />
-                </div>
-                <h2 class="experience-sub-title project-title">Currency Converter</h2>
-                 <p>A real-time currency converter instantly converts currencies using live exchange rates.</p>
-                <br>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://currency-converter-noks.vercel.app/'">
-                        Go to Website
-                    </button>
+    <div class="about-layout">
+      <div class="about-img-col reveal">
+        <div class="about-img-frame">
+          <img src="./assets/Peralta hero.png" alt="Jericho Peralta" />
+          <div class="about-img-tag">
+            <span>Developer · Designer · Creator</span>
+          </div>
+        </div>
+      </div>
 
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https://github.com/N0KS2801/CURRENCY_CONVERTER_API'">
-                        Github
-                    </button>
-                </div>
-            </div>
-
-
-            </div>
+      <div class="about-text-col">
+        <div class="about-block reveal">
+          <span class="about-block-label">WHO I AM</span>
+          <h3>Jericho Peralta</h3>
+          <p>I'm an international student in Australia pursuing a <strong>Master of Information Technology</strong>, with a Bachelor's degree in IT from the Philippines. I combine strong programming skills with hands-on graphic design experience, bringing both technical precision and creative energy to every project I take on.</p>
         </div>
 
-        <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
+        <div class="about-block reveal reveal-delay">
+          <span class="about-block-label">WHAT DRIVES ME</span>
+          <p>I'm passionate about building innovative software and web solutions that make a real impact. I thrive in collaborative, forward-thinking teams and love the intersection of <strong>code and design</strong> — where logic meets aesthetics.</p>
+        </div>
 
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" 
-                />
-                <p><a href="mailto:nokieperalta@gmail.com">nokieperalta@gmail.com</a></p>
-            </div>
+        <div class="stat-row reveal reveal-delay">
+          <div class="about-stat">
+            <span class="astat-n">2+</span>
+            <span class="astat-l">Years in Web Dev</span>
+          </div>
+          <div class="about-stat">
+            <span class="astat-n">MIT</span>
+            <span class="astat-l">Currently Pursuing</span>
+          </div>
+          <div class="about-stat">
+            <span class="astat-n">PH→AU</span>
+            <span class="astat-l">Based in Australia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" 
-                />
-                <p><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></p>
-            </div>
+  <!-- ── EXPERIENCE / ARSENAL SECTION ── -->
+  <section id="experience">
+    <div class="section-label-row">
+      <span class="sec-num">02</span>
+      <span class="sec-slash">/</span>
+      <span class="sec-tag">Skills</span>
+    </div>
 
-    </section>
+    <h2 class="section-title reveal">My <em>Arsenal</em></h2>
+    <p class="section-sub reveal">Tools, languages, and platforms I wield on the daily.</p>
 
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright © 2023 Jericho Peralta. All rights reserved.</p>
-    </footer>
+    <div class="arsenal-grid">
 
-    <script src="script.js"></script>
+      <div class="arsenal-card reveal">
+        <div class="ac-header">
+          <span class="ac-icon">&#60;/&#62;</span>
+          <div>
+            <h3>Frontend</h3>
+            <p>What users see and feel</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li><span>HTML</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>CSS</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>JavaScript</span><span class="sk-badge sk-basic">Basic</span></li>
+          <li><span>React</span><span class="sk-badge sk-basic">Basic</span></li>
+          <li><span>TypeScript</span><span class="sk-badge sk-basic">Basic</span></li>
+        </ul>
+      </div>
+
+      <div class="arsenal-card reveal reveal-delay">
+        <div class="ac-header">
+          <span class="ac-icon">{ }</span>
+          <div>
+            <h3>Backend</h3>
+            <p>Logic under the hood</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li><span>Python</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>SQL</span><span class="sk-badge sk-basic">Basic</span></li>
+          <li><span>PHP</span><span class="sk-badge sk-basic">Basic</span></li>
+          <li><span>Node.js</span><span class="sk-badge sk-basic">Basic</span></li>
+          <li><span>Java</span><span class="sk-badge sk-basic">Basic</span></li>
+        </ul>
+      </div>
+
+      <div class="arsenal-card reveal reveal-delay-2">
+        <div class="ac-header">
+          <span class="ac-icon">✦</span>
+          <div>
+            <h3>Design</h3>
+            <p>Creative tools I love</p>
+          </div>
+        </div>
+        <ul class="skill-list">
+          <li><span>Figma</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>Photoshop</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>Illustrator</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>Adobe AE</span><span class="sk-badge sk-exp">Experienced</span></li>
+          <li><span>Canva / CapCut</span><span class="sk-badge sk-exp">Experienced</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS SECTION ── -->
+  <section id="projects">
+    <div class="section-label-row">
+      <span class="sec-num">03</span>
+      <span class="sec-slash">/</span>
+      <span class="sec-tag">Work</span>
+    </div>
+
+    <h2 class="section-title reveal">Recent <em>Projects</em></h2>
+    <p class="section-sub reveal">Things I've built that I'm proud of.</p>
+
+    <div class="projects-list">
+
+      <div class="project-row reveal">
+        <div class="proj-num">01</div>
+        <div class="proj-img-wrap">
+          <img src="./assets/antigomode 1080.jpg" alt="Antigomode" />
+          <div class="proj-overlay">
+            <a href="https://antigomode.com" target="_blank">Website ↗</a>
+            <a href="https://www.instagram.com/antigomode/" target="_blank">Instagram ↗</a>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-type">E-Commerce</span>
+          <h3 class="proj-name">Antigomode</h3>
+          <p class="proj-desc">A sleek online store for Antigomode, showcasing its fashion collections with effortless usability and a clean modern design.</p>
+          <div class="proj-tags">
+            <span>HTML</span><span>CSS</span><span>Shopify</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row reveal">
+        <div class="proj-num">02</div>
+        <div class="proj-img-wrap">
+          <img src="./assets/Gonav Hero 1080.jpg" alt="GoNav" />
+          <div class="proj-overlay">
+            <a href="https://www.figma.com/proto/CnKwHHNjID4gtzITUWujul/GOnav?node-id=2-12" target="_blank">Prototype ↗</a>
+            <a href="https://youtu.be/fTmRWudllyo" target="_blank">Video ↗</a>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-type">Mobile App</span>
+          <h3 class="proj-name">GoNav</h3>
+          <p class="proj-desc">A mobile app enabling MMSU students to navigate campus and access campus news seamlessly — designed and prototyped in Figma.</p>
+          <div class="proj-tags">
+            <span>Figma</span><span>UX Design</span><span>Prototype</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row reveal">
+        <div class="proj-num">03</div>
+        <div class="proj-img-wrap">
+          <img src="./assets/Currency-Converter.png" alt="Currency Converter" />
+          <div class="proj-overlay">
+            <a href="https://currency-converter-noks.vercel.app/" target="_blank">Website ↗</a>
+            <a href="https://github.com/N0KS2801/CURRENCY_CONVERTER_API" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-type">Web App</span>
+          <h3 class="proj-name">Currency Converter</h3>
+          <p class="proj-desc">Real-time currency converter powered by live exchange rate APIs. Clean, responsive, and fast.</p>
+          <div class="proj-tags">
+            <span>JavaScript</span><span>API</span><span>Vercel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row reveal">
+        <div class="proj-num">04</div>
+        <div class="proj-img-wrap">
+          <img src="./assets/Prime-Fitness.png" alt="Prime Fitness" />
+          <div class="proj-overlay">
+            <a href="https://prime-fitness-jerichoperalta.vercel.app/" target="_blank">Website ↗</a>
+            <a href="https://github.com/N0KS2801/Fitlife-Gym-Website" target="_blank">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-type">Landing Page</span>
+          <h3 class="proj-name">Prime Fitness</h3>
+          <p class="proj-desc">Modern fitness platform designed to help individuals train smarter and reach their peak performance. Bold visuals, tight layout.</p>
+          <div class="proj-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT SECTION ── -->
+  <section id="contact">
+    <div class="section-label-row">
+      <span class="sec-num">04</span>
+      <span class="sec-slash">/</span>
+      <span class="sec-tag">Get In Touch</span>
+    </div>
+
+    <div class="contact-split">
+      <div class="contact-left reveal">
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+        <p class="contact-blurb">Have a project in mind, or just want to say hello? My inbox is always open. I'd love to hear from you.</p>
+        <div class="contact-open-tag">
+          <span class="dot"></span>
+          Open for Projects &amp; Collabs
+        </div>
+      </div>
+
+      <div class="contact-right reveal reveal-delay">
+        <a href="mailto:jerichoperalta28@gmail.com" class="contact-row">
+          <span class="cr-icon">✉</span>
+          <div>
+            <span class="cr-label">Email</span>
+            <span class="cr-val">jerichoperalta28@gmail.com</span>
+          </div>
+          <span class="cr-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jericho-nookie-peralta-6889b229a/" target="_blank" class="contact-row">
+          <span class="cr-icon">in</span>
+          <div>
+            <span class="cr-label">LinkedIn</span>
+            <span class="cr-val">jericho-nookie-peralta</span>
+          </div>
+          <span class="cr-arrow">↗</span>
+        </a>
+        <a href="https://github.com/N0KS2801" target="_blank" class="contact-row">
+          <span class="cr-icon">{ }</span>
+          <div>
+            <span class="cr-label">GitHub</span>
+            <span class="cr-val">N0KS2801</span>
+          </div>
+          <span class="cr-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-top">
+      <a href="#hero" class="footer-logo"><span class="logo-slash">/</span> JERICHO</a>
+      <p class="footer-quote">"Built with code, passion, and a little bit of chaos."</p>
+    </div>
+    <div class="footer-mid">
+      <div class="footer-col">
+        <span class="fc-label">Navigate</span>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Arsenal</a></li>
+          <li><a href="#projects">Work</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span class="fc-label">Contact</span>
+        <ul>
+          <li><a href="mailto:jerichoperalta28@gmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/jericho-nookie-peralta-6889b229a/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/N0KS2801" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <span class="fc-label">Based In</span>
+        <p>Australia 🇦🇺</p>
+        <span class="fc-label" style="margin-top:1rem">Open For</span>
+        <p>Projects &amp; Collabs</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Jericho Peralta. All rights reserved.</p>
+      <p>Designed &amp; built by Jericho with ♥</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
