@@ -975,3 +975,71 @@ footer {
   .stat-row { flex-wrap: wrap; gap: 1.5rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
+
+
+
+/* Skill List Icons */
+.skill-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.skill-list li img {
+  width: 40px;
+  height: 40px;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.skill-list li img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Floating keyframes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+
+/* Floating icons */
+.skill-list li img {
+  width: 40px;
+  height: 40px;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect: scale + slight rotate */
+.skill-list li img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Floating keyframes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+
+/* Center the cards in the grid */
+.arsenal-grid {
+  display: flex;
+  flex-wrap: wrap;       /* allows wrapping on smaller screens */
+  gap: 2rem;             /* space between cards */
+  justify-content: center; /* centers all cards horizontally */
+}
+
+/* Ensure all cards have similar width */
+.arsenal-card {
+  flex: 1 1 250px;       /* allows shrinking/growing */
+  max-width: 300px;      /* keeps them uniform */
+}
