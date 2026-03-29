@@ -1016,28 +1016,6 @@ footer {
 
 
 
-/* Floating icons */
-.skill-list li img {
-  width: 40px;
-  height: 40px;
-  animation: float 3s ease-in-out infinite;
-  transition: transform 0.3s ease;
-}
-
-/* Hover effect: scale + slight rotate */
-.skill-list li img:hover {
-  transform: scale(1.2) rotate(5deg);
-}
-
-/* Floating keyframes */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0px); }
-}
-
-
-
 
 /* Center the cards in the grid */
 .arsenal-grid {
@@ -1052,3 +1030,22 @@ footer {
   flex: 1 1 250px;       /* allows shrinking/growing */
   max-width: 300px;      /* keeps them uniform */
 }
+
+
+
+/* Levels */
+.sk-exp {
+  background: #00ffae20;
+  color: #00ffae;
+}
+
+.sk-intermediate {
+  background: #ffaa0020;
+  color: #ffaa00;
+}
+
+.sk-basic {
+  background: #80808030;
+  color: #ccc;
+}
+
