@@ -305,7 +305,11 @@ section {
   min-height: calc(100vh - 120px);
 }
 
-.hero-left { }
+.hero-left { 
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
 
 .hero-label {
   font-family: var(--font-mono);
@@ -657,6 +661,11 @@ section {
   background: rgba(255,255,255,0.04);
   color: var(--muted);
   border: 1px solid var(--border);
+}
+.sk-intermediate {
+  background: rgba(200, 200, 200, 0.08);
+  color: #cfcfcf;
+  border: 1px solid rgba(200, 200, 200, 0.2);
 }
 
 /* ── PROJECTS ────────────────────────────────── */
