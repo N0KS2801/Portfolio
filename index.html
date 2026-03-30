@@ -54,7 +54,10 @@
           <span class="hero-surname">Peralta.</span>
         </h1>
         <p class="hero-tagline">"Code meets creativity."</p>
-        <p class="hero-desc"><strong>Web Developer</strong> &amp; <strong>Graphic Designer</strong> based in Australia. I build things that are fast, functional, and beautiful.</p>
+        <p class="hero-desc">
+          an aspiring <span id="typing-roles"></span> based in Australia. I build things that are fast, functional, and aesthetically pleasing digital solutions.
+        </p>
+
         <div class="hero-cta-row">
           <button class="btn btn-light" onclick="location.href='#projects'">View My Work</button>
           <button class="btn btn-ghost" onclick="window.open('./assets/Jericho Peralta Resume .pdf')">Download CV</button>
@@ -85,20 +88,44 @@
       </div>
     </div>
 
-    <div class="hero-stats-bar">
-      <div class="hstat"><span class="hstat-n">HTML/CSS</span><span class="hstat-l">Experienced</span></div>
-      <div class="hstat-divider" aria-hidden="true">—</div>
-      <div class="hstat"><span class="hstat-n">JavaScript</span><span class="hstat-l">Proficient</span></div>
-      <div class="hstat-divider" aria-hidden="true">—</div>
-      <div class="hstat"><span class="hstat-n">Figma</span><span class="hstat-l">Experienced</span></div>
-      <div class="hstat-divider" aria-hidden="true">—</div>
-      <div class="hstat"><span class="hstat-n">Python</span><span class="hstat-l">Proficient</span></div>
-    </div>
+          <div class="hero-stats-bar work-experience-bar">
+        <div class="hstat">
+          <span class="hstat-n">Graphic Designer </span>
+          <span class="hstat-l">Imprenta Graphics</span>
+          <span class="hstat-j">2022 - 2025</span>
+        </div>
+
+        <div class="hstat-divider" aria-hidden="true">-</div>
+
+        <div class="hstat">
+          <span class="hstat-n">Tech Support</span>
+          <span class="hstat-l">Civil Aviation Authority of the Philippines</span>
+          <span class="hstat-j">2024</span>
+        </div>
+
+        <div class="hstat-divider" aria-hidden="true">-</div>
+
+        <div class="hstat">
+          <span class="hstat-n">Registrar Administrative Staff</span>
+          <span class="hstat-l">Mariano Marcos State University</span>
+          <span class="hstat-j">2023 - 2024 </span>
+        </div>
+
+        <div class="hstat-divider" aria-hidden="true">-</div>
+
+        <div class="hstat">
+          <span class="hstat-n">IT Support Intern</span>
+          <span class="hstat-l">Department of Information and Communications Technology</span>
+          <span class="hstat-j">2022 - 2024</span>
+        </div>
+      </div>
+
 
     <div class="scroll-hint" onclick="location.href='#about'">
-      <span>Scroll</span>
-      <div class="scroll-bar"></div>
+    <span class="scroll-text">SCROLL</span>
+    <div class="scroll-arrow">▼</div>
     </div>
+
   </section>
 
   <!-- ── ABOUT SECTION ── -->
@@ -544,5 +571,36 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+const roles = ["Web Developer","Software Engineer", "Graphic Designer", "UI/UX Designer"];
+let current = 0;
+let index = 0;
+let deleting = false;
+
+const typingSpeed = 100;      // typing speed
+const pause = 2000;           // pause at the end of each word
+
+function typeRoles() {
+  const el = document.getElementById("typing-roles");
+  const word = roles[current];
+
+  el.textContent = deleting
+    ? word.substring(0, index--)
+    : word.substring(0, index++);
+
+  if (!deleting && index === word.length + 1) {
+    setTimeout(() => deleting = true, pause);
+  } else if (deleting && index === 0) {
+    deleting = false;
+    current = (current + 1) % roles.length;
+  }
+
+  setTimeout(typeRoles, typingSpeed);
+}
+
+typeRoles();
+</script>
+  
 </body>
 </html>
