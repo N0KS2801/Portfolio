@@ -680,22 +680,6 @@ section {
   border-radius: 100px;
 }
 
-.sk-exp {
-  background: #00ffae20;
-  color: #00ffae;
-  box-shadow: 0 0 10px #00ffae40;
-}
-
-.sk-intermediate {
-  background: #ffaa0020;
-  color: #ffaa00;
-  box-shadow: 0 0 10px #ffaa0040;
-}
-
-.sk-basic {
-  background: #80808030;
-  color: #ccc;
-}
 
 /* ── PROJECTS ────────────────────────────────── */
 #projects { background: var(--bg-2); }
@@ -1062,21 +1046,7 @@ footer {
 
 
 
-/* Levels */
-.sk-exp {
-  background: #00ffae20;
-  color: #00ffae;
-}
 
-.sk-intermediate {
-  background: #ffaa0020;
-  color: #ffaa00;
-}
-
-.sk-basic {
-  background: #80808030;
-  color: #ccc;
-}
 
 
 .arsenal-card {
@@ -1108,10 +1078,23 @@ footer {
   box-shadow: 0 0 10px #00ffae40;
 }
 
+.sk-exp:hover {
+  box-shadow: 0 0 16px #00D1D1, 0 0 32px #00D1D180; /* slightly stronger glow on hover */
+  color: #ffffff; /* optional hover text color */
+}
+
 .sk-intermediate {
-  background: #ffaa0020;
-  color: #ffaa00;
-  box-shadow: 0 0 10px #ffaa0040;
+  background: #00D1D120; /* semi-transparent background */
+  color: #00D1D1;        /* main text color */
+  box-shadow: 0 0 12px #00D1D140, 0 0 24px #00D1D120; /* subtle glow */
+  border-radius: 6px;     /* optional, for smoother edges */
+  padding: 4px 10px;      /* optional, better spacing */
+  transition: 0.3s ease;  /* smooth hover or color transitions */
+}
+
+.sk-intermediate:hover {
+  box-shadow: 0 0 16px #00D1D1, 0 0 32px #00D1D180; /* slightly stronger glow on hover */
+  color: #ffffff; /* optional hover text color */
 }
 
 .sk-basic {
