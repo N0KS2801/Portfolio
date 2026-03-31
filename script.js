@@ -113,3 +113,125 @@ setInterval(nextSlide, 4000);
 
 // Initial display
 showSlide(currentIndex);
+
+
+
+const greetings = [
+  "Hello",
+  "Hola",
+  "Bonjour",
+  "Ciao",
+  "こんにちは",
+  "안녕하세요",
+  "你好",
+  "Olá",
+  "Привет",
+  "Kamusta"
+];
+
+let index = 0;
+const textEl = document.getElementById("intro-text");
+
+function showGreeting() {
+  textEl.classList.remove("show");
+
+  setTimeout(() => {
+    textEl.textContent = greetings[index];
+    textEl.classList.add("show");
+    index = (index + 1) % greetings.length;
+  }, 120);
+}
+
+// initial show
+setTimeout(() => {
+  textEl.classList.add("show");
+}, 100);
+
+// ⚡ smooth fast rotation
+const interval = setInterval(showGreeting, 400);
+
+// fade out intro (cinematic exit)
+setTimeout(() => {
+  clearInterval(interval);
+
+  const intro = document.getElementById("intro");
+
+  intro.style.opacity = "0";
+
+  // slight zoom out effect before disappearing
+  textEl.style.transform = "scale(1.2)";
+  textEl.style.opacity = "0";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+  }, 600);
+}, 3500);
+
+
+const roles = [
+  "Software Engineer",
+  "Web Developer",
+  "Graphic Designer",
+  "UI/UX Designer",
+  
+];
+
+let i = 0;        // role index
+let j = 0;        // character index
+let currentRole = "";
+let isDeleting = false;
+
+const el = document.getElementById("typing-roles");
+
+function typeEffect() {
+  if (!el) return; // 🔥 prevents error if element not found
+
+  currentRole = roles[i];
+
+  if (!isDeleting) {
+    el.textContent = currentRole.substring(0, j++);
+  } else {
+    el.textContent = currentRole.substring(0, j--);
+  }
+
+  let speed = isDeleting ? 50 : 90;
+
+  // finished typing
+  if (!isDeleting && j === currentRole.length + 1) {
+    speed = 1200; // pause
+    isDeleting = true;
+  }
+
+  // finished deleting
+  else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % roles.length;
+    speed = 300;
+  }
+
+  setTimeout(typeEffect, speed);
+}
+
+// ✅ IMPORTANT: wait until page is loaded
+window.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+});
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Lock scroll at first
+  document.body.classList.add("intro-active");
+
+  // Simulate intro duration (e.g., 2.5s)
+  setTimeout(() => {
+    const intro = document.getElementById("intro");
+    if (intro) intro.style.display = "none"; // hide intro
+    document.body.classList.remove("intro-active"); // unlock scroll
+  }, 2500); // adjust duration to match your animation
+});
+
+
+window.scrollTo({
+  top: document.getElementById("hero").offsetTop,
+  behavior: "smooth"
+});
