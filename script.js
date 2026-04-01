@@ -235,3 +235,11 @@ window.scrollTo({
   top: document.getElementById("hero").offsetTop,
   behavior: "smooth"
 });
+
+
+
+
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
